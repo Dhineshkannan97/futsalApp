@@ -44,13 +44,13 @@ public class UserController {
         }
     }
 
-    @PostMapping("/logout")
-    public ResponseEntity<String> logoutUser(@RequestBody User logoutRequest) {
-        String username = logoutRequest.getUsername();
-        if (userService.logoutUser(username)) {
-            return new ResponseEntity<>(Constants.LOGOUT_SUCCESS_MESSAGE, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(Constants.LOGOUT_FAILED_MESSAGE, HttpStatus.UNAUTHORIZED);
-        }
-    }
+//    @PostMapping("/logout")
+//    public ResponseEntity<String> logoutUser(@RequestBody User logoutRequest) {
+//        String username = logoutRequest.getUsername();
+//        if (userService.logoutUser(username)) {
+//            return new ResponseEntity<>(Constants.LOGOUT_SUCCESS_MESSAGE, HttpStatus.OK);
+//        } else {
+//            return new ResponseEntity<>(Constants.LOGOUT_FAILED_MESSAGE, HttpStatus.UNAUTHORIZED);
+//        }
+//    }
 }
