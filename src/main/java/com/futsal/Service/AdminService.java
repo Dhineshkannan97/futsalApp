@@ -1,7 +1,7 @@
-package com.droptaxi.Service;
+package com.futsal.Service;
 
-import com.droptaxi.Entity.User;
-import com.droptaxi.Repo.UserRepository;
+import com.futsal.Entity.User;
+import com.futsal.Repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,7 +32,7 @@ public class AdminService {
                 user.setUpdate_at(new Timestamp(System.currentTimeMillis()));
                 userRepository.save(user);
 
-                String action = activation ? "activated" : "deactivated";
+                String action = activation ? "Activated" : "Deactivated";
                 return "User " + action + " successfully.";
             } else {
                 throw new RuntimeException("User not found with id: " + id);

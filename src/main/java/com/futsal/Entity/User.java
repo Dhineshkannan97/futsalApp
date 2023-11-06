@@ -1,4 +1,4 @@
-package com.droptaxi.Entity;
+package com.futsal.Entity;
 
 
 import lombok.Data;

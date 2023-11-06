@@ -1,8 +1,6 @@
-package com.droptaxi.controller;
+package com.futsal.controller;
 
-import com.droptaxi.Entity.User;
-import com.droptaxi.Repo.UserRepository;
-import com.droptaxi.Service.AdminService;
+import com.futsal.Service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,8 +11,6 @@ import org.springframework.web.bind.annotation.*;
 public class AdminController {
     @Autowired
     private AdminService adminService;
-//    @Autowired
-//    private UserRepository userRepository;
 
     @GetMapping("/activationStatus")
     public ResponseEntity<Boolean> getUserActivationStatus(@RequestParam("id") Long id) {
@@ -22,7 +18,7 @@ public class AdminController {
         if (status != null) {
             return new ResponseEntity<>(status, HttpStatus.OK);
         } else {
-            return new ResponseEntity<>(false, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(false, HttpStatus.NOT_FOUND);// dose i need to send a valid message for admin
         }
     }
 

@@ -1,8 +1,8 @@
-package com.droptaxi.controller;
+package com.futsal.controller;
 
 import com.Constants;
-import com.droptaxi.Entity.User;
-import com.droptaxi.Service.UserService;
+import com.futsal.Entity.User;
+import com.futsal.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,10 +18,10 @@ public class UserController {
     public ResponseEntity<String> registerUser(@RequestBody User request) {
         String response = userService.registerUser(request.getUsername(), request.getPassword());
         System.out.println(response);
-        if (response.equals("User Registered Successfully")) {
-            return new ResponseEntity<>("User Registered Successfully", HttpStatus.CREATED);
+        if (response.equals(Constants.USER_REGISTERED )) {
+            return new ResponseEntity<>(Constants.USER_REGISTERED, HttpStatus.CREATED);
         } else {
-            return new ResponseEntity<>("Username Already Exists", HttpStatus.CONFLICT);
+            return new ResponseEntity<>(Constants.USERNAME_EXISTS, HttpStatus.CONFLICT);
         }
     }
 

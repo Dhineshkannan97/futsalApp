@@ -1,6 +1,6 @@
-package com.droptaxi.Repo;
+package com.futsal.Repo;
 
-import com.droptaxi.Entity.User;
+import com.futsal.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
